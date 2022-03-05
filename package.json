@@ -4,7 +4,7 @@
   "description": "mongoose flights lab",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon server"
   },
   "author": "Dylan Kotzer",
   "license": "ISC",

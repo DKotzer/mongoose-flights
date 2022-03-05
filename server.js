@@ -12,6 +12,13 @@ app.listen(PORT, () => console.log(`App is using port: ${PORT}`));
 
 const expressLayouts = require("express-ejs-layouts");
 
+const indexRoute = require("./routes/index");
+const flightsRoute = require("./routes/flights");
+
+//Mount Routes
+app.use("/", indexRoute);
+app.use("/", flightsRoute);
+
 //checks views folder for layout.ejs
 // app.use(expressLayouts);
 

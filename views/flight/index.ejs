@@ -1,0 +1,21 @@
+<h1>Flights</h1>
+
+<table>
+  <tr>
+    <th>Airline</th>
+    <th>Airport</th>
+    <th>Flight #</th>
+    <th>Departs</th>
+  </tr>
+  <% flights.forEach(function(flight) { %>
+  <tr>
+    <td><%=flight.airline %></td>
+    <td><%=flight.airport %></td>
+    <td>
+      <a href="/flight/detail?id=<%=flight.id%>"> <%=flight.flightNo %></a>
+    </td>
+    <td><%=moment(flight.departs).format("YY-MM-DD HH:mm") %></td>
+
+    <% }) %>
+  </tr>
+</table>
