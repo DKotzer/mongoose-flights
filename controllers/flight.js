@@ -4,12 +4,13 @@ const moment = require("moment");
 //HTTP GET - Load an Add flights form
 exports.flight_create_get = (req, res) => {
   res.render("flight/add");
+  const newFlight = new Flight();
 };
 
 //HTTP Post
 exports.flight_create_post = (req, res) => {
   console.log(req.body);
-  let flight = new Flight(req.body);
+  newFlight = Flight(req.body);
 
   //save flight
   //below is an example of promises
