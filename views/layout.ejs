@@ -1,3 +1,88 @@
+<style>
+  * {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    /* background: grey; */
+    background-image: url("https://i.imgur.com/fV19l8h.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  table {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    border-radius: 5px;
+
+    background: rgba(255, 255, 255, 0.88);
+    max-width: 350px;
+
+    border: 2px solid rgba(128, 128, 128, 0.15);
+    border-radius: 5px;
+  }
+
+  nav {
+    text-align: center;
+  }
+  nav li {
+    display: inline;
+  }
+  ul {
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.726);
+  }
+
+  li {
+    float: none;
+  }
+
+  li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+    border-radius: 10px;
+  }
+
+  th {
+    background-color: #009879;
+
+    padding: 5px;
+    color: #ffffff;
+    /* text-align: left; */
+    border-radius: 4px;
+  }
+  td {
+    padding: 5px 5px;
+    margin: 0;
+    border-bottom: 1px solid rgba(90, 89, 89, 0.507);
+  }
+  tr {
+    text-align: center;
+  }
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +92,16 @@
     <title>Mongoose Flights</title>
   </head>
   <body>
-    Shared Header Layout from Layout Page <br /><br />
+    <h1>Mongoose Flights</h1>
+    <br /><br />
     <hr />
-    <nav></nav>
-    <a href="/flight/index">Flights</a>
-    <a href="/flight/add">Add Flight</a> <br /><br />
+    <nav>
+      <ul>
+        <li><a href="/flight/index">Flights</a></li>
+        <li><a href="/flight/add">Add Flight</a></li>
+      </ul>
+    </nav>
+    <br /><br />
     <%- body %> <br /><br />
 
     Shared Footer
