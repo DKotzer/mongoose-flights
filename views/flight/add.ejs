@@ -1,24 +1,33 @@
 <h1>Add Flight</h1>
 
 <form action="/flight/add" method="post">
-  <div>
+  <p>
     <label>Airline</label>
     <input type="text" name="airline" id="airline" placeholder="Airline" />
-  </div>
-  <div>
-     <div>
+  </p>
+  <p></p>
+  <p>
     <label>Airport</label>
-    <input type="text" name="airport" id="airport" value="DEN"/>
-  </div>
-  <div>
+    <input type="text" name="airport" id="airport" value="DEN" />
+  </p>
+  <p>
     <label>Flight Number</label>
-    <input type="number" name="flightNo" id="flightNo" placeholder="Flight Number" />
-  </div>
-  <div>
+    <input
+      type="number"
+      name="flightNo"
+      id="flightNo"
+      placeholder="Flight Number"
+    />
+  </p>
+  <p>
     <label>Departs</label>
-    <input type="datetime-local" name="departs" id="departs" value="2022-03-06T08:30"/>
-  </div>
-
+    <input
+      type="datetime-local"
+      name="departs"
+      id="departs"
+      value="2022-03-06T08:30"
+    />
+  </p>
 
   <button type="submit">Create Flight</button>
 </form>

@@ -59,7 +59,6 @@
     text-decoration: none;
   }
 
-  /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
     border-radius: 10px;
@@ -67,10 +66,8 @@
 
   th {
     background-color: #009879;
-
     padding: 5px;
     color: #ffffff;
-    /* text-align: left; */
     border-radius: 4px;
   }
   td {
@@ -81,6 +78,55 @@
   tr {
     text-align: center;
   }
+
+  input {
+    width: 220px;
+    padding: 15px;
+    margin-bottom: 5px;
+    display: table-cell;
+    border-radius: 10px;
+  }
+  form {
+    display: table;
+    background-color: rgba(255, 255, 255, 0.875);
+    width: 330px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  p {
+    display: table-row;
+  }
+  label {
+    display: table-cell;
+    color: black;
+    padding: 0px;
+  }
+  form button {
+    position: relative;
+    left: 130px;
+    margin-top: 5px;
+    border: 3px solid #226fbe;
+    border-radius: 15px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #2270be34;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  form button:hover {
+    border: 3px solid #226fbe;
+    background-color: #2270bebb;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+  }
+  /* .red {
+    color: red;
+  } */
 </style>
 
 <!DOCTYPE html>
