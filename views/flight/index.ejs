@@ -1,16 +1,17 @@
-<h3>Flights</h3>
+<h1>Flights</h1>
 
-<table>
+<table class="indexTable">
   <tr>
     <th>Airline</th>
     <th>Airport</th>
     <th>Flight #</th>
     <th>Departs</th>
   </tr>
-  <% flights.sort((a,b)=>{ return (b.departs) - (a.departs) }) %> <%
-  flights.forEach(function(flight) {if(flight.departs <= new
-  Date().getTime()){console.log(flight.departs + "- " + "bad date")} %>
-  <tr>
+  <% let red %> <% flights.sort((a,b)=>{ return (b.departs) - (a.departs) }) %>
+  <% flights.forEach(function(flight) {if(flight.departs <= new
+  Date().getTime()){ red="red",console.log(flight.departs + "- " + "old date") }
+  %>
+  <tr class="<%=red%>">
     <td><%=flight.airline %></td>
     <td><%=flight.airport %></td>
     <td>
