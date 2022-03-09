@@ -15,10 +15,12 @@ app.use(expressLayouts);
 
 const indexRoute = require("./routes/index");
 const flightsRoute = require("./routes/flights");
+const moviesRoute = require("./routes/movies");
 
 //Mount Routes
 app.use("/", indexRoute);
 app.use("/", flightsRoute);
+app.use("/", moviesRoute);
 
 //checks views folder for layout.ejs
 

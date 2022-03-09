@@ -8,7 +8,7 @@ exports.flight_create_get = (req, res) => {
   res.render("flight/add");
 };
 
-//HTTP Post
+//HTTP Post flight create
 exports.flight_create_post = (req, res) => {
   console.log(req.body);
   const newFlight = new Flight(req.body);

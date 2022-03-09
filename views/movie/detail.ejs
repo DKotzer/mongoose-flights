@@ -1,0 +1,19 @@
+<div>
+  <div><h2><%=movie.name %></h2></div>
+
+  <div>
+    <div><a href="/movie/addreview?id=<%=movie.id %>">Add Review</a></div>
+    <h3>Reviews</h3>
+    <% movie.reviews.forEach(function(review){ %>
+    <hr />
+    <td><%=review %></td>
+  </div>
+
+  <%})%>
+
+  <div>
+    <br />
+    <br />
+  </div>
+  <div><a href="/movie/addreview?id=<%=movie.id %>">Add Review</a></div>
+</div>

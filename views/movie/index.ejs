@@ -1,0 +1,14 @@
+<h1>Movies</h1>
+
+<table class="indexTable">
+  <tr>
+    <th>Movie</th>
+  </tr>
+
+  <% movies.forEach(function(movie) { %>
+  <tr class="">
+    <td><a href="/movie/detail?id=<%=movie.id%>"> <%=movie.name %></a></td>
+  </tr>
+
+  <% }) %>
+</table>

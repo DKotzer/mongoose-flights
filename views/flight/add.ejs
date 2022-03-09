@@ -19,15 +19,21 @@
       placeholder="Flight Number"
     />
   </p>
+  <% const dateHolder = Date.now() + 31540000000 %>
+  <% const newDate = new Date(dateHolder).toISOString().slice(0,16) %>
+
+  
+
   <p>
     <label>Departs</label>
     <input
       type="datetime-local"
       name="departs"
       id="departs"
-      value="2023-03-06T08:30"
-    />
+      value=<%=newDate%> />
   </p>
+
+
 
   <button type="submit">Create Flight</button>
 </form>
