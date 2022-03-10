@@ -3,12 +3,26 @@
 <form action="/flight/add" method="post">
   <p>
     <label>Airline</label>
-    <input type="text" name="airline" id="airline" placeholder="Airline" />
+
+    <select class="form-select select" name="airline" id="airline-select">
+      <!-- <option value="">--Please choose an Airline--</option> -->
+      <option value="American">American</option>
+      <option value="Southwest">Southwest</option>
+      <option value="United">United</option>
+    </select>
   </p>
   <p></p>
   <p>
     <label>Airport</label>
-    <input type="text" name="airport" id="airport" value="DEN" />
+    <select class="form-select select" name="airport" id="airport-select">
+      <selected>
+        <option value="DEN">DEN</option>
+        <option value="AUS">AUS</option>
+        <option value="DFW">DFW</option>
+        <option value="LAX">LAX</option>
+        <option value="SAN">SAN</option>
+      </selected>
+    </select>
   </p>
   <p>
     <label>Flight Number</label>
@@ -17,12 +31,13 @@
       name="flightNo"
       id="flightNo"
       placeholder="Flight Number"
+      min="10"
+      max="9999"
+      required
     />
   </p>
-  <% const dateHolder = Date.now() + 31540000000 %>
-  <% const newDate = new Date(dateHolder).toISOString().slice(0,16) %>
-
-  
+  <% const dateHolder = Date.now() + 31540000000 %> <% const newDate = new
+  Date(dateHolder).toISOString().slice(0,16) %>
 
   <p>
     <label>Departs</label>
@@ -30,10 +45,9 @@
       type="datetime-local"
       name="departs"
       id="departs"
-      value=<%=newDate%> />
+      value="<%=newDate%>"
+    />
   </p>
-
-
 
   <button type="submit">Create Flight</button>
 </form>

@@ -8,8 +8,9 @@ const PORT = 4000;
 //Initialize Express Application
 const app = express();
 
-app.listen(PORT, () => console.log(`App is using port: ${PORT}`));
 
+
+app.use(express.static("public"));
 const expressLayouts = require("express-ejs-layouts");
 app.use(expressLayouts);
 
@@ -41,3 +42,4 @@ mongoose.connect(
 app.get("/", (req, res) => {
   res.render("home/another");
 });
+app.listen(PORT, () => console.log(`App is using port: ${PORT}`));

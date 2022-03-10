@@ -1,0 +1,15 @@
+<body>
+  <h1>New Ticket</h1>
+
+  <form action="/flight/addticket/<%=flight.id%>" method="post">
+    <div>
+      <label>Seat</label>
+      <input name="seat" required pattern="[A-F][1-9]\d?" />
+    </div>
+    <div>
+      <label>Price</label>
+      <input type="number" name="price" id="price" />
+    </div>
+    <button type="submit">Create Ticket</button>
+  </form>
+</body>

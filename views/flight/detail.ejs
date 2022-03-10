@@ -1,9 +1,88 @@
 
-
-
- <% movie.reviews.forEach(function(review){ %>
-    <hr />
-    <td><%=review %></td>
-  </div>
-
+<h2>Flight Details</h2>
+<table class="indexTable">
+  <tr>
+    <th>Airline</th>
+    <th>Airport</th>
+    <th>Flight #</th>
+    <th>Departs</th>
+  </tr>
+  <% let red %> 
+  <% if(flight.departs <= new Date().getTime()){ red="red" }%>
+  
+  <tr class="<%=red%>">
+    <td><%=flight.airline %></td>
+    <td><%=flight.airport %></td>
+    <td><%=flight.flightNo %></td>
+    <td><%=moment(flight.departs).format("YY-MM-DD HH:mm") %></td>
+  </tr>
+</table>
+<hr>
+  <div>
+    <h3>Destinations</h3>
+    
+   <table>
+  <% flight.destinations.sort((a,b)=>{ return (b.arrival) - (a.arrival) }) %>
+  
+  
+ <% flight.destinations.forEach(function(destination){ %>
+    <tr>
+    <td>Destination: <%=destination.airport%></td>
+    <td><%=moment(destination.arrival).format("YY-MM-DD HH:mm") %></td>
+    <td><a href="/flight/detail/delete?id=<%=destination.id%>">Delete</a></td>
+    </tr>
+    <!-- <td><%=destination.airport %></td>
+    <td><%=destination.arrival %></td> -->
+      
   <%})%>
+  </table> 
+   </div>
+
+<hr>
+  <h3>Add Destination</h3>
+
+<form action="/flight/addDestination/<%=flight.id %>" method="post" class="form-check">
+  
+      <label for="airport-select">Airport</label>
+    <select class="form-select select" name="airport" id="airport-select">
+    <selected>
+      <option id="DEN" class= "" value="DEN">DEN</option>
+      <option id="AUS" class= "" value="AUS">AUS</option>
+      <option id="DFW" class= "" value="DFW">DFW</option>
+      <option id="LAX" class= "" value="LAX">LAX</option>
+      <option id="SAN" class= "" value="SAN">SAN</option>
+  </selected>
+
+  <% const dateHolder = Date.now() + 31540000000 %>
+  <% const newDate = new Date(dateHolder).toISOString().slice(0,16) %>
+
+ 
+    <label for="arrival">Arrival</label>
+    <input
+      type="datetime-local"
+      name="arrival"
+      id="arrival"
+      value=<%=newDate%> />
+ 
+
+  <button type="submit">Add Destination</button>
+</form>
+<hr>
+<a href="/flight/addTicket?id=<%=flight.id %>" class="form-check"> 
+  <button class="btn btn-primary"  type="submit">New Ticket</button>
+</a>
+<hr>
+<h2>Ticket List</h2>
+<table class="tickets">
+ <% tickets.forEach(function(ticket){ %>
+    <tr>
+    <td>Seat: <%=ticket.seat%></td>
+     <td>Price: $<%=ticket.price%>.00</td>
+    <td>Stops <%=flight.destinations.length%></td>
+    <td><a href="/flight/ticket/delete?id=<%=ticket.id%>">Delete</a></td>
+    </tr>
+    <hr>
+ 
+      
+  <%})%>
+  </table> 

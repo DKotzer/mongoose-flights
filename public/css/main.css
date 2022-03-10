@@ -1,0 +1,155 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+* {
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+button {
+  outline: 1px grey solid;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background: grey; */
+  background-image: url("https://i.imgur.com/fV19l8h.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.skills {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+table {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 2px solid rgba(128, 128, 128, 0.15);
+  border-radius: 5px;
+}
+
+nav {
+  text-align: center;
+}
+nav li {
+  display: inline;
+}
+ul {
+  border-radius: 5px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.808);
+  font-size: 28px;
+}
+
+li {
+  float: none;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+  border-radius: 10px;
+}
+
+th {
+  background-color: #009879;
+  padding: 5px;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 30px;
+}
+td {
+  padding: 5px 5px;
+  margin: 0;
+  border-bottom: 1px solid rgba(90, 89, 89, 0.507);
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+tr {
+  text-align: center;
+}
+
+input {
+  width: 350px;
+  padding: 15px;
+  margin-bottom: 5px;
+  display: table-cell;
+  border-radius: 10px;
+  font-size: 20px;
+}
+form {
+  display: table;
+  background-color: rgba(196, 195, 241, 0.952);
+  /* width: 350px; */
+  min-width: 400px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px;
+  padding: 5px;
+  border: 5px solid blue;
+}
+p {
+  display: table-row;
+}
+.select {
+  font-size: 22px;
+  border-radius: 10px;
+  border: 1px grey solid;
+  margin-bottom: 4px;
+}
+label {
+  display: table-cell;
+  color: black;
+  padding: 0px;
+  font-size: 22px;
+}
+form button {
+  position: center;
+  margin-top: 5px;
+  border: 3px solid #226fbe;
+  border-radius: 15px;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #2270be34;
+  font-size: 15px;
+}
+
+form button:hover {
+  border: 3px solid #226fbe;
+  background-color: #2270bebb;
+}
+
+.red {
+  color: red;
+}
+
+.tickets td {
+  padding: 20px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
