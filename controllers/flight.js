@@ -47,11 +47,11 @@ exports.flight_index_get = (req, res) => {
 
 //HTTP Get - details by id
 exports.detail_create_get = (req, res) => {
-  console.log("target id-" + req.query.id);
+  // console.log("target id-" + req.query.id);
   Flight.findById(req.query.id)
     .then(async (flight) => {
       let tickets = await Ticket.find({ flight: flight.id });
-      console.log(tickets);
+      // console.log(tickets);
       res.render("flight/detail", { flight, moment, tickets });
     })
     .catch((err) => {
@@ -61,11 +61,11 @@ exports.detail_create_get = (req, res) => {
 //HTTP delete details by ID
 exports.destination_delete_get = (req, res) => {
   console.log("req query-delete id :" + req.query.id);
-  console.log(Flight.findOne({ destinations: { destination: req.query.id } }));
+  // console.log(Flight.findOne({ destinations: { destination: req.query.id } }));
   //how to log current url?
-  Flight.findOneAndDelete({ destinations: { destination: req.query.id } })
-    .then((flights) => {
-      console.log("delete test- " + flights);
+  Destination.find({ destinations: { destination: req.query.id } })
+    .then(() => {
+      console.log("delete test- " + flight);
       // console.log(flight);
       res.redirect("back");
     })

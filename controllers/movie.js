@@ -32,8 +32,9 @@ exports.review_create_get = (req, res) => {
 exports.review_create_post = (req, res) => {
   let movie = Movie.findById({ _id: req.query.id });
   // console.log(req.body);
-  console.log(req.query.id);
-  movie.review.push(review);
+  console.log("reviewreqquerid " + req.query.id);
+  console.log("review " + req.body);
+  movie.review.push(req.body);
 
   // Movie.findById({ _id: req.query.id }).then();
 

@@ -11,6 +11,7 @@ const flightSchema = mongoose.Schema({
   flightNo: { type: Number, min: 10, max: 9999 },
   departs: { type: Date, default: Date.now() + 31540000000 },
   destinations: [destinationSchema],
+  // destinations: { type: mongoose.Schema.Types.ObjectId, ref: "Destination" }, //for bonus delete destination
 });
 
 const Flight = mongoose.model("Flight", flightSchema);
